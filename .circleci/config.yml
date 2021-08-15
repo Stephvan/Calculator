@@ -1,5 +1,5 @@
 # Python CircleCI 2.0 configuration file
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
@@ -15,7 +15,8 @@ jobs:
       - run:
           name: Modify Dockerfile
           command: |
-            sed -i 's/imagename/'"$IMAGENAME"'/' requirements.txt    
+            sed -i 's/imagename/'"$IMAGENAME"'/' requirements.txt
+            cat requirements.txt
       - run:
           name: install dependencies
           command: |
