@@ -14,8 +14,8 @@ jobs:
     
       - run:
           name: Modify Dockerfile
-          commands: |
-                    sed -i 's/imagename/'"$IMAGENAME"'/' requirements.txt    
+          command: |
+            sed -i 's/imagename/'"$IMAGENAME"'/' requirements.txt    
       - run:
           name: install dependencies
           command: |
